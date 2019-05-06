@@ -1,0 +1,22 @@
+<h1>Samsung Data</h1>
+
+<p *ngIf="!products"><em>Loading...</em></p>
+
+<table class='table' *ngIf="products">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Product Name</th>
+      <th>Model Code</th>
+      <th>Serial Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.productName }}</td>
+      <td>{{ product.modelCode }}</td>
+      <td>{{ product.serialNumber }}</td>
+    </tr>
+  </tbody>
+</table>
